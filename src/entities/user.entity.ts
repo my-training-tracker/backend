@@ -17,4 +17,7 @@ export class User {
 
   @OneToMany(() => Exercise, (exercise) => exercise.user)
   exercises: Exercise[];
+
+  @Column({ nullable: true })
+  refreshToken: string;
 }

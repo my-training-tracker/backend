@@ -23,5 +23,13 @@ export class UsersService {
     return this.usersRepository.findOne({ where: { email } });
   }
 
+  async findById(id: number): Promise<User | undefined> {
+    return this.usersRepository.findOne({ where: { id } });
+  }
+
+  async updateRefreshToken(userId: number, refreshToken: string | null) {
+    await this.usersRepository.update(userId, { refreshToken });
+  }
+
   // 다른 메서드 구현...
 }
