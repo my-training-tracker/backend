@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { ExercisesModule } from './exercises/exercises.module';
+import { AuthModule } from './auth/auth.module';
 import { User } from './entities/user.entity';
 import { Exercise } from './entities/exercise.entity';
 
@@ -19,6 +20,7 @@ import { Exercise } from './entities/exercise.entity';
     }),
     UsersModule,
     ExercisesModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
